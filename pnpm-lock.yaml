@@ -29,6 +29,9 @@ dependencies:
   '@angular/router':
     specifier: ^16.1.8
     version: 16.1.8(@angular/common@16.1.8)(@angular/core@16.1.8)(@angular/platform-browser@16.1.8)(rxjs@7.8.1)
+  '@zoom-image/angular':
+    specifier: ^0.1.0
+    version: 0.1.0(@angular/common@16.1.8)(@angular/core@16.1.8)
   rxjs:
     specifier: ~7.8.1
     version: 7.8.1
@@ -42,7 +45,7 @@ dependencies:
 devDependencies:
   '@angular-devkit/build-angular':
     specifier: ^16.1.8
-    version: 16.1.8(@angular/compiler-cli@16.1.8)(karma@6.4.2)(ng-packagr@16.0.0)(typescript@5.1.6)
+    version: 16.1.8(@angular/compiler-cli@16.1.8)(karma@6.4.2)(ng-packagr@16.1.0)(typescript@5.1.6)
   '@angular/cli':
     specifier: ~16.1.8
     version: 16.1.8
@@ -71,8 +74,8 @@ devDependencies:
     specifier: ~2.1.0
     version: 2.1.0(jasmine-core@5.1.0)(karma-jasmine@5.1.0)(karma@6.4.2)
   ng-packagr:
-    specifier: ^16.0.0
-    version: 16.0.0(@angular/compiler-cli@16.1.8)(tslib@2.6.1)(typescript@5.1.6)
+    specifier: ^16.1.0
+    version: 16.1.0(@angular/compiler-cli@16.1.8)(tslib@2.6.1)(typescript@5.1.6)
   typescript:
     specifier: ~5.1.6
     version: 5.1.6
@@ -97,7 +100,7 @@ packages:
       - chokidar
     dev: true
 
-  /@angular-devkit/build-angular@16.1.8(@angular/compiler-cli@16.1.8)(karma@6.4.2)(ng-packagr@16.0.0)(typescript@5.1.6):
+  /@angular-devkit/build-angular@16.1.8(@angular/compiler-cli@16.1.8)(karma@6.4.2)(ng-packagr@16.1.0)(typescript@5.1.6):
     resolution: {integrity: sha512-iyElPBQdcJq2plw5YqSz4mzNUfSRXI3ISFTEwPtimzPOorsj/OxB3Z6kJ8fDUsBAJ5OKR7xL7VnQJJ3S+05RhQ==}
     engines: {node: ^16.14.0 || >=18.10.0, npm: ^6.11.0 || ^7.5.6 || >=8.0.0, yarn: '>= 1.13.0'}
     peerDependencies:
@@ -174,7 +177,7 @@ packages:
       magic-string: 0.30.0
       mini-css-extract-plugin: 2.7.6(webpack@5.86.0)
       mrmime: 1.0.1
-      ng-packagr: 16.0.0(@angular/compiler-cli@16.1.8)(tslib@2.6.1)(typescript@5.1.6)
+      ng-packagr: 16.1.0(@angular/compiler-cli@16.1.8)(tslib@2.6.1)(typescript@5.1.6)
       open: 8.4.2
       ora: 5.4.1
       parse5-html-rewriting-stream: 7.0.0
@@ -2453,6 +2456,23 @@ packages:
   /@yarnpkg/lockfile@1.1.0:
     resolution: {integrity: sha512-GpSwvyXOcOOlV70vbnzjj4fW5xW/FdUF6nQEt1ENy7m4ZCczi1+/buVUPAqmGfqznsORNFzUMjctTIp8a9tuCQ==}
     dev: true
+
+  /@zoom-image/angular@0.1.0(@angular/common@16.1.8)(@angular/core@16.1.8):
+    resolution: {integrity: sha512-WtRnqF3rLCtt9HezV/jRgGqxZAeWpHCwYlekBf0x7KmUNXYnEl+hh7ETCDnmWNSRK13089fW0YGWJu4B2n3wMw==}
+    peerDependencies:
+      '@angular/common': ^16.1.0
+      '@angular/core': ^16.1.0
+    dependencies:
+      '@angular/common': 16.1.8(@angular/core@16.1.8)(rxjs@7.8.1)
+      '@angular/core': 16.1.8(rxjs@7.8.1)(zone.js@0.13.1)
+      '@zoom-image/core': 0.20.0
+      rxjs: 7.8.1
+      tslib: 2.6.1
+    dev: false
+
+  /@zoom-image/core@0.20.0:
+    resolution: {integrity: sha512-QJOGDaHCCkGCAaytWanf0YypOd2gKvn5trn1sHgEFB8T76jgk6RMhuplRJvmKJOitHcr2DKZEwYFurwd9nZ3+w==}
+    dev: false
 
   /abab@2.0.6:
     resolution: {integrity: sha512-j2afSsaIENvHZN2B8GOpF566vZ5WVk5opAiMTvWgaQT8DkbOqsTfvNAvHoRGU2zzP8cPoqys+xHTRDWW8L+/BA==}
@@ -5077,15 +5097,15 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /ng-packagr@16.0.0(@angular/compiler-cli@16.1.8)(tslib@2.6.1)(typescript@5.1.6):
-    resolution: {integrity: sha512-PSgzS9WMypXyZbI5G54mNiarT54a3j5vf5pj84BOWJaSh6MbX3q49fR1ql41A+qtkPkG+e7xQ3IhMOnOMilobg==}
+  /ng-packagr@16.1.0(@angular/compiler-cli@16.1.8)(tslib@2.6.1)(typescript@5.1.6):
+    resolution: {integrity: sha512-NbgzDRtRiYJi98Ssky7U5GoicZz7VkR3OW5qd9q3dt3H/JNqLh2PwB745NFG2cT00lEvfrY6LJ1NAcOjoWDibA==}
     engines: {node: ^16.14.0 || >=18.10.0}
     hasBin: true
     peerDependencies:
-      '@angular/compiler-cli': ^16.0.0-next.0
+      '@angular/compiler-cli': ^16.0.0 || ^16.1.0-next.0
       tailwindcss: ^2.0.0 || ^3.0.0
       tslib: ^2.3.0
-      typescript: '>=4.9.3 <5.1'
+      typescript: '>=4.9.3 <5.2'
     peerDependenciesMeta:
       tailwindcss:
         optional: true
