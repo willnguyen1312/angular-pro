@@ -20,6 +20,7 @@
     "@angular/router": "^16.2.0",
     "@socialplayer/angular": "^0.2.0",
     "@zoom-image/angular": "^0.1.1",
+    "@zoom-image/core": "^0.21.0",
     "rxjs": "~7.8.1",
     "tslib": "^2.6.1",
     "zone.js": "~0.13.1"
