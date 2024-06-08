@@ -7,14 +7,15 @@ import { Product, products } from '../products';
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
-  styleUrls: ['./product-details.component.css']
+  styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent implements OnInit {
-
   product: Product | undefined;
 
-  constructor(private route: ActivatedRoute, private cartService: CartService) { }
-
+  constructor(
+    private route: ActivatedRoute,
+    private cartService: CartService,
+  ) {}
 
   ngOnInit() {
     // First get the product id from the current route.
@@ -22,7 +23,9 @@ export class ProductDetailsComponent implements OnInit {
     const productIdFromRoute = Number(routeParams.get('productId'));
 
     // Find the product that correspond with the id provided in route.
-    this.product = products.find(product => product.id === productIdFromRoute);
+    this.product = products.find(
+      (product) => product.id === productIdFromRoute,
+    );
   }
 
   addToCart(product: Product) {
